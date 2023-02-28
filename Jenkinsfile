@@ -25,7 +25,7 @@ pipeline {
 
     stage('Deliver') {
       steps {
-        sh './jenkins/scripts/deliver.sh'
+        sh 'npm start'
         input '<"Proceed" to continue)'
         sh './jenkins/scripts/kill.sh.'
       }
